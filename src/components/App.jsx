@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchContacts } from '../redux/contactsOps';
 import { selectLoading, selectError } from '../redux/contactsSlice';
 
+import css from './App.module.css';
+
 import ContactForm from './ContactForm/ContactForm';
 import SearchBox from './SearchBox/SearchBox';
 import ContactList from './ContactList/ContactList';
@@ -18,7 +20,7 @@ const App = () => {
 
   return (
     <div>
-      <h1>Phonebook</h1>
+      <h1 className={css.header}>Phonebook</h1>
       <ContactForm />
       <SearchBox />
       {loading && <p>Loading contacts...</p>}
